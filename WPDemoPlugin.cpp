@@ -11,11 +11,6 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-#ifdef MYEXTENSIONDLL_EXPORTS
-#define MYEXTENSIONDLL_API __declspec(dllexport)
-#else
-#define MYEXTENSIONDLL_API __declspec(dllimport)
-#endif
 
 static AFX_EXTENSION_MODULE WPDemoPluginDLL = { NULL, NULL };
 
@@ -39,6 +34,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 	return 1;   // ok
 }
 
-extern "C" MYEXTENSIONDLL_API CWPDemoPluginInterface* CreatePluginInstance() {
+extern "C" WPDEMOPLUGIN_API CWPDemoPluginInterface* CreatePluginInstance() {
 	return new CWPDemoPluginInterface;
 }

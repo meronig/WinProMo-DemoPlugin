@@ -2,12 +2,13 @@
 #include "WPDemoPluginInterface.h"
 #include "resource.h"
 #include "../WinProMo/WinProMoDoc.h"
-#include "WPDemoView.h"
+#include "../WinProMo/WinProMoView.h"
+//#include "WPDemoView.h"
 #include "../WinProMo/WinProMoDocTemplate.h"
 
 CMultiDocTemplate* CWPDemoPluginInterface::RegisterPlugin(CRuntimeClass* pFrameClass, CProMoClipboardHandler* pClip)
 {
-    static CMultiDocTemplate* g_pTemplate = nullptr;
+    static CMultiDocTemplate* g_pTemplate = NULL;
 
     if (!g_pTemplate)
     {
@@ -15,7 +16,7 @@ CMultiDocTemplate* CWPDemoPluginInterface::RegisterPlugin(CRuntimeClass* pFrameC
             IDR_WPDPLUGIN,
             RUNTIME_CLASS(CWinProMoDoc),
             pFrameClass,
-            RUNTIME_CLASS(CWPDemoView),
+            RUNTIME_CLASS(CWinProMoView),
             pClip
         );
     }
@@ -65,6 +66,16 @@ const CString CWPDemoPluginInterface::GetDocumentType()
 const UINT CWPDemoPluginInterface::GetDocumentID()
 {
     return IDR_WPDPLUGIN;
+}
+
+CRuntimeClass* CWPDemoPluginInterface::GetPluginDoc()
+{
+    return RUNTIME_CLASS(CWinProMoDoc);
+}
+
+CRuntimeClass* CWPDemoPluginInterface::GetPluginView()
+{
+    return RUNTIME_CLASS(CWinProMoView);
 }
 
 void CWPDemoPluginInterface::Destroy()

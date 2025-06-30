@@ -10,6 +10,8 @@ class CWPDemoPluginInterface :
 	virtual CObArray* GetCommands();
 	virtual const CString GetDocumentType();
 	virtual const UINT GetDocumentID();
+	virtual CRuntimeClass* GetPluginDoc();
+	virtual CRuntimeClass* GetPluginView();
 	virtual void Destroy();
 };
 

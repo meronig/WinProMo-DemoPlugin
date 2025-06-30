@@ -3,10 +3,10 @@
 
 #include "..\WinProMo\WinProMoView.h"
 
-class AFX_EXT_CLASS CWPDemoView :
+class WPDEMOPLUGIN_API CWPDemoView :
     public CWinProMoView
 {
-protected: // create from serialization only
+public: // create from serialization only
     DECLARE_DYNCREATE(CWPDemoView)
 
 public:

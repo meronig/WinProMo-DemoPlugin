@@ -29,5 +29,10 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 
+#ifdef WPDEMOPLUGIN_EXPORTS
+#define WPDEMOPLUGIN_API __declspec(dllexport)
+#else
+#define WPDEMOPLUGIN_API __declspec(dllimport)
+#endif
 
 
