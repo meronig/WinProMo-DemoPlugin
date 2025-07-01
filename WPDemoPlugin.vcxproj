@@ -196,6 +196,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="WPDemoDoc.cpp" />
     <ClCompile Include="WPDemoPlugin.cpp" />
     <ClCompile Include="WPDemoPluginInterface.cpp" />
     <ClCompile Include="WPDemoView.cpp" />
@@ -206,6 +207,7 @@
   <ItemGroup>
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="WPDemoDoc.h" />
     <ClInclude Include="WPDemoPluginInterface.h" />
     <ClInclude Include="WPDemoView.h" />
   </ItemGroup>

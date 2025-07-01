@@ -101,9 +101,9 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON_NODE           ICON                    "res\\icon1.ico"
+IDR_WPPLUGIN            ICON                    "res\\WinProMoDoc.ico"
 
-IDR_WPDPLUGIN           ICON                    "res\\WinProMoDoc.ico"
+IDI_ICON_NODE           ICON                    "res\\icon1.ico"
 
 IDI_ICON_EDGE           ICON                    "res\\ico00002.ico"
 
@@ -116,7 +116,7 @@ IDI_ICON_EDGE           ICON                    "res\\ico00002.ico"
 STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "WinProMo"
-    IDR_WPDPLUGIN           "\nWinPro\nWinPro\n\n\nWinProMo.Document\nWinPro Document"
+	IDR_WPPLUGIN            "\nWinPro\nWinPro\n\n\nWinProMo.Document\nWinPro Document"
 END
 
 STRINGTABLE
