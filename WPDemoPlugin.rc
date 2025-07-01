@@ -120,7 +120,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDR_WPPLUGIN            "\nDemoPlugin\nDemo Plugin\n\n\nDemoPlugin.Document\nDemo Plugin Document"
+    IDR_WPPLUGIN            "\nDemoPlugin\nDemo Plugin\nWinProMo Document (*.wpd)\n.wpd\nDemoPlugin.Document\nDemo Plugin Document"
 END
 
 STRINGTABLE
