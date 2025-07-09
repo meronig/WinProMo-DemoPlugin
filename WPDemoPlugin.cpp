@@ -35,5 +35,5 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }
 
 extern "C" WPDEMOPLUGIN_API CWPDemoPluginInterface* CreatePluginInstance() {
-	return new CWPDemoPluginInterface;
+	return new CWPDemoPluginInterface();
 }

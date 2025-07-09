@@ -3,7 +3,6 @@
 // Used by WPDemoPlugin.rc
 //
 #define IDR_MAINFRAME                   128
-#define IDR_WPDPLUGIN                   129
 #define IDR_WPPLUGIN                    200
 #define IDI_ICON_EDGE                   201
 #define IDI_ICON_NODE                   202
