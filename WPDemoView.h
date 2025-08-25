@@ -34,12 +34,5 @@ protected:
 
 };
 
-#ifndef _DEBUG  // debug version in WinProMoView.cpp
-inline CWinProMoDoc* CWPDemoView::GetDocument()
-{
-    return (CWinProMoDoc*)m_pDocument;
-}
-#endif
-
 #endif //_DEMOVIEW_H_
 

@@ -35,8 +35,8 @@ NULL=nul
 # Begin Project
 # PROP Target_Last_Scanned "DemoPlugin - Win32 Debug"
 CPP=cl.exe
-MTL=mktyplib.exe
 RSC=rc.exe
+MTL=mktyplib.exe
 
 !IF  "$(CFG)" == "DemoPlugin - Win32 Release"
 
@@ -91,8 +91,8 @@ BSC32_SBRS= \
 	
 LINK32=link.exe
 # ADD BASE LINK32 /nologo /subsystem:windows /dll /machine:I386
-# ADD LINK32 ../WinPromo/Debug/WinProMo.lib /nologo /base:0x12000000 /subsystem:windows /dll /machine:I386 /out:"../Release/DemoPlugin.dll"
-LINK32_FLAGS=../WinPromo/Debug/WinProMo.lib /nologo /base:0x12000000\
+# ADD LINK32 ../WinPromo/Release/WinProMo.lib /nologo /base:0x12000000 /subsystem:windows /dll /machine:I386 /out:"../Release/DemoPlugin.dll"
+LINK32_FLAGS=../WinPromo/Release/WinProMo.lib /nologo /base:0x12000000\
  /subsystem:windows /dll /incremental:no /pdb:"$(OUTDIR)/DemoPlugin.pdb"\
  /machine:I386 /out:"../Release/DemoPlugin.dll"\
  /implib:"$(OUTDIR)/DemoPlugin.lib" 
