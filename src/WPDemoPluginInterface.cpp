@@ -10,7 +10,7 @@
 #include "resource.h"
 #include "WPDemoView.h"
 #include "WPDemoDoc.h"
-#include "../WinProMo/WinProMoDocTemplate.h"
+#include "../../WinProMo/src/WinProMoDocTemplate.h"
 
 CMultiDocTemplate* CWPDemoPluginInterface::RegisterPlugin(CRuntimeClass* pFrameClass, CProMoClipboardHandler* pClip)
 {

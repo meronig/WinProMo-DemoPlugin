@@ -8,7 +8,7 @@
 #ifndef _WPDEMOPLUGININTERFACE_H_
 #define _WPDEMOPLUGININTERFACE_H_
 
-#include "../WinProMo/WinProMoPluginInterface.h"
+#include "../../WinProMo/src/WinProMoPluginInterface.h"
 class CWPDemoPluginInterface :
     public CWinProMoPluginInterface
 {
