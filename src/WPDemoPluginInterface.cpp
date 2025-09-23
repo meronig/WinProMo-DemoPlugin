@@ -71,7 +71,7 @@ const CString CWPDemoPluginInterface::GetDocumentType()
 
 const UINT CWPDemoPluginInterface::GetDocumentID()
 {
-    return IDR_WPDPLUGIN;
+    return IDR_WPPLUGIN;
 }
 
 void CWPDemoPluginInterface::Destroy()
