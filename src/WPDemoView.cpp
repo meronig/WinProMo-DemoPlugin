@@ -8,6 +8,7 @@
 #include "stdafx.h"
 #include "WPDemoView.h"
 #include "resource.h"
+#include "../../WinProMo/src/ProMoEditor/ProMoLabel.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -22,6 +23,8 @@ BEGIN_MESSAGE_MAP(CWPDemoView, CWinProMoView)
 		// NOTE - the ClassWizard will add and remove mapping macros here.
 		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG_MAP
+	ON_COMMAND(ID_INSERT_LABEL, OnInsertLabel)
+	ON_UPDATE_COMMAND_UI(ID_INSERT_LABEL, OnUpdateInsertLabel)
 	ON_COMMAND(ID_INSERT_NODE, OnInsertNode)
 	ON_UPDATE_COMMAND_UI(ID_INSERT_NODE, OnUpdateInsertNode)
 	ON_COMMAND(ID_INSERT_EDGE, OnInsertEdge)
@@ -35,6 +38,25 @@ CWPDemoView::CWPDemoView()
 
 CWPDemoView::~CWPDemoView()
 {
+}
+
+void CWPDemoView::OnInsertLabel()
+{
+	m_editor->UnselectAll();
+	CProMoLabel* obj = new CProMoLabel;
+	m_editor->StartDrawingObject(obj);
+}
+
+void CWPDemoView::OnUpdateInsertLabel(CCmdUI* pCmdUI)
+{
+	if (m_editor->IsDrawing()) {
+		CProMoLabel* obj = dynamic_cast<CProMoLabel*>(m_editor->GetDrawingObject());
+		if (obj) {
+			pCmdUI->SetCheck(TRUE);
+			return;
+		}
+	}
+	pCmdUI->SetCheck(FALSE);
 }
 
 void CWPDemoView::OnInsertNode()

@@ -24,6 +24,8 @@ protected:
 	//{{AFX_MSG(CWPDemoView)
 		// NOTE - the ClassWizard will add and remove member functions here.
 		//    DO NOT EDIT what you see in these blocks of generated code !
+	afx_msg void OnInsertLabel();
+	afx_msg void OnUpdateInsertLabel(CCmdUI* pCmdUI);
 	afx_msg void OnInsertNode();
 	afx_msg void OnUpdateInsertNode(CCmdUI* pCmdUI);
 	afx_msg void OnInsertEdge();

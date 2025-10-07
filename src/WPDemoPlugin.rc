@@ -125,6 +125,7 @@ END
 
 STRINGTABLE
 BEGIN
+    ID_INSERT_LABEL         "Inserts a new label\nLabel"
     ID_INSERT_NODE          "Inserts a new node\nNode"
     ID_INSERT_EDGE          "Inserts a new edge\nEdge"
 END

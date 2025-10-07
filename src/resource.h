@@ -6,8 +6,9 @@
 #define IDR_WPPLUGIN                    200
 #define IDI_ICON_EDGE                   201
 #define IDI_ICON_NODE                   202
-#define ID_INSERT_NODE                  2000
-#define ID_INSERT_EDGE                  2001
+#define ID_INSERT_LABEL                 2000
+#define ID_INSERT_NODE                  2001
+#define ID_INSERT_EDGE                  2002
 
 // Next default values for new objects
 // 
