@@ -8,7 +8,7 @@
 #ifndef _DEMOVIEW_H_
 #define _DEMOVIEW_H_
 
-#include "../../WinProMo/src/WinProMoView.h"
+#include "../../WinProMo-App/src/WinProMoView.h"
 
 class WPDEMOPLUGIN_API CWPDemoView :
     public CWinProMoView

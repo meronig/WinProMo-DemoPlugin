@@ -10,25 +10,9 @@
 #include "resource.h"
 #include "WPDemoView.h"
 #include "WPDemoDoc.h"
-#include "../../WinProMo/src/WinProMoDocTemplate.h"
-
-CMultiDocTemplate* CWPDemoPluginInterface::RegisterPlugin(CRuntimeClass* pFrameClass, CProMoClipboardHandler* pClip)
-{
-    static CMultiDocTemplate* g_pTemplate = NULL;
-
-    if (!g_pTemplate)
-    {
-        g_pTemplate = new CWinProMoDocTemplate(
-            IDR_WPPLUGIN,
-            RUNTIME_CLASS(CWPDemoDoc),
-            pFrameClass,
-            RUNTIME_CLASS(CWPDemoView),
-            pClip
-        );
-    }
-
-    return g_pTemplate;
-}
+#include "../../WinProMo/src/ProMoEditor/ProMoEditor.h"
+#include "../../WinProMo/src/ProMoEditor/ProMoEntityContainer.h"
+#include "WPDemoCmdHandler.h"
 
 CObArray* CWPDemoPluginInterface::GetElements()
 {
@@ -91,4 +75,19 @@ const UINT CWPDemoPluginInterface::GetDocumentID()
 void CWPDemoPluginInterface::Destroy()
 {
     delete this;
+}
+
+CWinProMoCmdHandler* CWPDemoPluginInterface::GetCmdHandler()
+{
+    return new CWPDemoCmdHandler;
+}
+
+CProMoEntityContainer* CWPDemoPluginInterface::GetContainer()
+{
+    return new CProMoEntityContainer("demoPlugin");
+}
+
+CProMoControlFactory* CWPDemoPluginInterface::GetControlFactory()
+{
+    return new CProMoControlFactory;
 }

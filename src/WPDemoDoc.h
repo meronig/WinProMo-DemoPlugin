@@ -8,7 +8,7 @@
 #ifndef _DEMODOC_H_
 #define _DEMODOC_H_
 
-#include "../../WinProMo/src/WinProMoDoc.h"
+#include "../../WinProMo-App/src/WinProMoDoc.h"
 class WPDEMOPLUGIN_API CWPDemoDoc :
     public CWinProMoDoc
 {

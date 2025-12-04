@@ -24,10 +24,7 @@
     <ClCompile Include="WPDemoPluginInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WPDemoView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WPDemoDoc.cpp">
+    <ClCompile Include="WPDemoCmdHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -46,10 +43,7 @@
     <ClInclude Include="WPDemoPluginInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WPDemoView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WPDemoDoc.h">
+    <ClInclude Include="WPDemoCmdHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -197,10 +197,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="StdAfx.cpp" />
-    <ClCompile Include="WPDemoDoc.cpp" />
+    <ClCompile Include="WPDemoCmdHandler.cpp" />
     <ClCompile Include="WPDemoPlugin.cpp" />
     <ClCompile Include="WPDemoPluginInterface.cpp" />
-    <ClCompile Include="WPDemoView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\DemoPlugin.rc2" />
@@ -208,9 +207,8 @@
   <ItemGroup>
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="WPDemoDoc.h" />
+    <ClInclude Include="WPDemoCmdHandler.h" />
     <ClInclude Include="WPDemoPluginInterface.h" />
-    <ClInclude Include="WPDemoView.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\ico00002.ico" />
