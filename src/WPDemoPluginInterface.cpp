@@ -8,8 +8,6 @@
 #include "stdafx.h"
 #include "WPDemoPluginInterface.h"
 #include "resource.h"
-#include "WPDemoView.h"
-#include "WPDemoDoc.h"
 #include "../../WinProMo/src/ProMoEditor/ProMoEditor.h"
 #include "../../WinProMo/src/ProMoEditor/ProMoEntityContainer.h"
 #include "WPDemoCmdHandler.h"
