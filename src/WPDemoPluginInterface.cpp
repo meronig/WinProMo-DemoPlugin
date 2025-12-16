@@ -89,3 +89,8 @@ CProMoControlFactory* CWPDemoPluginInterface::GetControlFactory()
 {
     return new CProMoControlFactory;
 }
+
+CProMoRenderer* CWPDemoPluginInterface::GetRenderer()
+{
+    return new CProMoRenderer;
+}

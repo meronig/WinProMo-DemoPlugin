@@ -22,6 +22,7 @@ class CWPDemoPluginInterface :
 	virtual CWinProMoCmdHandler* GetCmdHandler();
 	virtual CProMoEntityContainer* GetContainer();
 	virtual CProMoControlFactory* GetControlFactory();
+	virtual CProMoRenderer* GetRenderer();
 };
 
 #endif
