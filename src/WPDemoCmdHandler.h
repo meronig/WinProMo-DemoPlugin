@@ -1,10 +1,17 @@
+/* ==========================================================================
+
+	Copyright © 2025 Technical University of Denmark
+
+	Author :		Giovanni Meroni
+
+   ========================================================================*/
 #ifndef _DEMOCOMMANDHANDLER_H_
 #define _DEMOCOMMANDHANDLER_H_
 
-#include "../../WinProMo/src/WinProMoCmdHandler.h"
+#include "../../WinProMo/src/ProMoEditor/ProMoCmdHandler.h"
 
 class AFX_EXT_CLASS CWPDemoCmdHandler :
-    public CWinProMoCmdHandler
+    public CProMoCmdHandler
 {
 public:
     CWPDemoCmdHandler();

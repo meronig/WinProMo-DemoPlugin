@@ -70,12 +70,17 @@ const UINT CWPDemoPluginInterface::GetDocumentID()
     return IDR_WPPLUGIN;
 }
 
+const CString CWPDemoPluginInterface::GetDocumentDescr()
+{
+    return CString("WinProMo Demo Plugin Diagram");
+}
+
 void CWPDemoPluginInterface::Destroy()
 {
     delete this;
 }
 
-CWinProMoCmdHandler* CWPDemoPluginInterface::GetCmdHandler()
+CProMoCmdHandler* CWPDemoPluginInterface::GetCmdHandler()
 {
     return new CWPDemoCmdHandler;
 }

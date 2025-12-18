@@ -1,3 +1,10 @@
+/* ==========================================================================
+
+	Copyright © 2025 Technical University of Denmark
+
+	Author :		Giovanni Meroni
+
+   ========================================================================*/
 #include "stdafx.h"
 #include "WPDemoCmdHandler.h"
 #include "../../WinProMo/src/ProMoEditor/ProMoLabel.h"

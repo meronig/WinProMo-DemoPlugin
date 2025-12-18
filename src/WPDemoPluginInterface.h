@@ -18,8 +18,9 @@ class CWPDemoPluginInterface :
 	virtual CObArray* GetCommands();
 	virtual const CString GetDocumentType();
 	virtual const UINT GetDocumentID();
+	virtual const CString GetDocumentDescr();
 	virtual void Destroy();
-	virtual CWinProMoCmdHandler* GetCmdHandler();
+	virtual CProMoCmdHandler* GetCmdHandler();
 	virtual CProMoEntityContainer* GetContainer();
 	virtual CProMoControlFactory* GetControlFactory();
 	virtual CProMoRenderer* GetRenderer();
