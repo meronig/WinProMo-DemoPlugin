@@ -87,12 +87,7 @@ CProMoCmdHandler* CWPDemoPluginInterface::GetCmdHandler()
 
 CProMoEntityContainer* CWPDemoPluginInterface::GetContainer()
 {
-    return new CProMoEntityContainer("demoPlugin");
-}
-
-CProMoControlFactory* CWPDemoPluginInterface::GetControlFactory()
-{
-    return new CProMoControlFactory;
+    return new CProMoEntityContainer(new CProMoControlFactory, "demoPlugin");
 }
 
 CProMoRenderer* CWPDemoPluginInterface::GetRenderer()

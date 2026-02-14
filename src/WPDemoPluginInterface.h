@@ -22,7 +22,6 @@ class CWPDemoPluginInterface :
 	virtual void Destroy();
 	virtual CProMoCmdHandler* GetCmdHandler();
 	virtual CProMoEntityContainer* GetContainer();
-	virtual CProMoControlFactory* GetControlFactory();
 	virtual CProMoRenderer* GetRenderer();
 };
 
