@@ -35,8 +35,8 @@ NULL=nul
 # Begin Project
 # PROP Target_Last_Scanned "DemoPlugin - Win32 Debug"
 CPP=cl.exe
-RSC=rc.exe
 MTL=mktyplib.exe
+RSC=rc.exe
 
 !IF  "$(CFG)" == "DemoPlugin - Win32 Release"
 
@@ -262,6 +262,7 @@ BuildCmds= \
 
 SOURCE=.\WPDemoPlugin.cpp
 DEP_CPP_WPDEM=\
+	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramEditor.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramEntity.h"\
@@ -309,6 +310,7 @@ DEP_CPP_WPDEM=\
 
 SOURCE=.\WPDemoPluginInterface.cpp
 DEP_CPP_WPDEMO=\
+	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramEditor.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramEntity.h"\
@@ -373,6 +375,7 @@ DEP_RSC_WPDEMOP=\
 
 SOURCE=.\WPDemoCmdHandler.cpp
 DEP_CPP_WPDEMOC=\
+	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramEditor.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramEntity.h"\
