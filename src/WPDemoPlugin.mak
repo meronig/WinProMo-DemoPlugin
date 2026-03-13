@@ -35,8 +35,8 @@ NULL=nul
 # Begin Project
 # PROP Target_Last_Scanned "DemoPlugin - Win32 Debug"
 CPP=cl.exe
-MTL=mktyplib.exe
 RSC=rc.exe
+MTL=mktyplib.exe
 
 !IF  "$(CFG)" == "DemoPlugin - Win32 Release"
 
@@ -261,6 +261,50 @@ BuildCmds= \
 # Begin Source File
 
 SOURCE=.\WPDemoPlugin.cpp
+
+!IF  "$(CFG)" == "DemoPlugin - Win32 Release"
+
+DEP_CPP_WPDEM=\
+	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEditor.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEntity.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEntityContainer.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramLine.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramMenu.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramPropertyDlg.h"\
+	"..\..\WinProMo\src\DiagramEditor\HitParams.h"\
+	"..\..\WinProMo\src\DiagramEditor\Tokenizer.h"\
+	"..\..\WinProMo\src\DiagramEditor\UndoItem.h"\
+	"..\..\WinProMo\src\FileUtils\VariantWrapper.h"\
+	"..\..\WinProMo\src\GeometryUtils\DoublePoint.h"\
+	"..\..\WinProMo\src\GeometryUtils\DoubleRect.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoBlockModel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoBlockView.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoClipboardHandler.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoCmdHandler.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoControlFactory.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEdgeView.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEditor.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEntity.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEntityContainer.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoLabel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoModel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoProperty.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoPropertyOwner.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoView.h"\
+	"..\..\WinProMo\src\StdAfx.h"\
+	"..\..\WinProMo\src\WinProMoPluginInterface.h"\
+	".\StdAfx.h"\
+	".\WPDemoPluginInterface.h"\
+	
+
+"$(INTDIR)\WPDemoPlugin.obj" : $(SOURCE) $(DEP_CPP_WPDEM) "$(INTDIR)"\
+ "$(INTDIR)\WPDemoPlugin.pch"
+
+
+!ELSEIF  "$(CFG)" == "DemoPlugin - Win32 Debug"
+
 DEP_CPP_WPDEM=\
 	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
@@ -304,11 +348,59 @@ DEP_CPP_WPDEM=\
  "$(INTDIR)\WPDemoPlugin.pch"
 
 
+!ENDIF 
+
 # End Source File
 ################################################################################
 # Begin Source File
 
 SOURCE=.\WPDemoPluginInterface.cpp
+
+!IF  "$(CFG)" == "DemoPlugin - Win32 Release"
+
+DEP_CPP_WPDEMO=\
+	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEditor.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEntity.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEntityContainer.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramLine.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramMenu.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramPropertyDlg.h"\
+	"..\..\WinProMo\src\DiagramEditor\HitParams.h"\
+	"..\..\WinProMo\src\DiagramEditor\Tokenizer.h"\
+	"..\..\WinProMo\src\DiagramEditor\UndoItem.h"\
+	"..\..\WinProMo\src\FileUtils\VariantWrapper.h"\
+	"..\..\WinProMo\src\GeometryUtils\DoublePoint.h"\
+	"..\..\WinProMo\src\GeometryUtils\DoubleRect.h"\
+	"..\..\WinProMo\src\GeometryUtils\GeometryHelper.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoBlockModel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoBlockView.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoClipboardHandler.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoCmdHandler.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoControlFactory.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEdgeView.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEditor.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEntity.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEntityContainer.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoLabel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoModel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoProperty.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoPropertyOwner.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoView.h"\
+	"..\..\WinProMo\src\StdAfx.h"\
+	"..\..\WinProMo\src\WinProMoPluginInterface.h"\
+	".\StdAfx.h"\
+	".\WPDemoCmdHandler.h"\
+	".\WPDemoPluginInterface.h"\
+	
+
+"$(INTDIR)\WPDemoPluginInterface.obj" : $(SOURCE) $(DEP_CPP_WPDEMO) "$(INTDIR)"\
+ "$(INTDIR)\WPDemoPlugin.pch"
+
+
+!ELSEIF  "$(CFG)" == "DemoPlugin - Win32 Debug"
+
 DEP_CPP_WPDEMO=\
 	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
@@ -353,6 +445,8 @@ DEP_CPP_WPDEMO=\
  "$(INTDIR)\WPDemoPlugin.pch"
 
 
+!ENDIF 
+
 # End Source File
 ################################################################################
 # Begin Source File
@@ -374,6 +468,47 @@ DEP_RSC_WPDEMOP=\
 # Begin Source File
 
 SOURCE=.\WPDemoCmdHandler.cpp
+
+!IF  "$(CFG)" == "DemoPlugin - Win32 Release"
+
+DEP_CPP_WPDEMOC=\
+	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEditor.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEntity.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramEntityContainer.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramLine.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramMenu.h"\
+	"..\..\WinProMo\src\DiagramEditor\DiagramPropertyDlg.h"\
+	"..\..\WinProMo\src\DiagramEditor\HitParams.h"\
+	"..\..\WinProMo\src\DiagramEditor\UndoItem.h"\
+	"..\..\WinProMo\src\FileUtils\VariantWrapper.h"\
+	"..\..\WinProMo\src\GeometryUtils\DoublePoint.h"\
+	"..\..\WinProMo\src\GeometryUtils\DoubleRect.h"\
+	"..\..\WinProMo\src\GeometryUtils\GeometryHelper.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoBlockModel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoBlockView.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoCmdHandler.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoControlFactory.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEdgeView.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEditor.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoEntity.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoLabel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoModel.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoProperty.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoPropertyOwner.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoView.h"\
+	"..\..\WinProMo\src\StdAfx.h"\
+	".\StdAfx.h"\
+	".\WPDemoCmdHandler.h"\
+	
+
+"$(INTDIR)\WPDemoCmdHandler.obj" : $(SOURCE) $(DEP_CPP_WPDEMOC) "$(INTDIR)"\
+ "$(INTDIR)\WPDemoPlugin.pch"
+
+
+!ELSEIF  "$(CFG)" == "DemoPlugin - Win32 Debug"
+
 DEP_CPP_WPDEMOC=\
 	"..\..\WinProMo\src\Automation\ProMoAutomationHost.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramClipboardHandler.h"\
@@ -410,6 +545,8 @@ DEP_CPP_WPDEMOC=\
 "$(INTDIR)\WPDemoCmdHandler.obj" : $(SOURCE) $(DEP_CPP_WPDEMOC) "$(INTDIR)"\
  "$(INTDIR)\WPDemoPlugin.pch"
 
+
+!ENDIF 
 
 # End Source File
 # End Target
