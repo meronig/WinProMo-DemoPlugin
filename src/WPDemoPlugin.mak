@@ -274,11 +274,14 @@ DEP_CPP_WPDEM=\
 	"..\..\WinProMo\src\DiagramEditor\DiagramMenu.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramPropertyDlg.h"\
 	"..\..\WinProMo\src\DiagramEditor\HitParams.h"\
+	"..\..\WinProMo\src\DiagramEditor\HitParamsRect.h"\
 	"..\..\WinProMo\src\DiagramEditor\Tokenizer.h"\
 	"..\..\WinProMo\src\DiagramEditor\UndoItem.h"\
+	"..\..\WinProMo\src\FileUtils\DibHelper.h"\
 	"..\..\WinProMo\src\FileUtils\VariantWrapper.h"\
 	"..\..\WinProMo\src\GeometryUtils\DoublePoint.h"\
 	"..\..\WinProMo\src\GeometryUtils\DoubleRect.h"\
+	"..\..\WinProMo\src\GeometryUtils\GeometryHelper.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoBlockModel.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoBlockView.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoClipboardHandler.h"\
@@ -292,6 +295,7 @@ DEP_CPP_WPDEM=\
 	"..\..\WinProMo\src\ProMoEditor\ProMoModel.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoProperty.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoPropertyOwner.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoRenderer.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoView.h"\
 	"..\..\WinProMo\src\StdAfx.h"\
 	"..\..\WinProMo\src\WinProMoPluginInterface.h"\
@@ -368,8 +372,10 @@ DEP_CPP_WPDEMO=\
 	"..\..\WinProMo\src\DiagramEditor\DiagramMenu.h"\
 	"..\..\WinProMo\src\DiagramEditor\DiagramPropertyDlg.h"\
 	"..\..\WinProMo\src\DiagramEditor\HitParams.h"\
+	"..\..\WinProMo\src\DiagramEditor\HitParamsRect.h"\
 	"..\..\WinProMo\src\DiagramEditor\Tokenizer.h"\
 	"..\..\WinProMo\src\DiagramEditor\UndoItem.h"\
+	"..\..\WinProMo\src\FileUtils\DibHelper.h"\
 	"..\..\WinProMo\src\FileUtils\VariantWrapper.h"\
 	"..\..\WinProMo\src\GeometryUtils\DoublePoint.h"\
 	"..\..\WinProMo\src\GeometryUtils\DoubleRect.h"\
@@ -387,6 +393,7 @@ DEP_CPP_WPDEMO=\
 	"..\..\WinProMo\src\ProMoEditor\ProMoModel.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoProperty.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoPropertyOwner.h"\
+	"..\..\WinProMo\src\ProMoEditor\ProMoRenderer.h"\
 	"..\..\WinProMo\src\ProMoEditor\ProMoView.h"\
 	"..\..\WinProMo\src\StdAfx.h"\
 	"..\..\WinProMo\src\WinProMoPluginInterface.h"\
