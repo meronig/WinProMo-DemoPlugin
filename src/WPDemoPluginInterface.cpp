@@ -1,18 +1,64 @@
 /* ==========================================================================
 
-    Copyright © 2025 Technical University of Denmark
+    Copyright © 2025-26 Technical University of Denmark
+
+    CWPDemoPluginInterface
 
     Author :		Giovanni Meroni
+
+	Purpose :		CWPDemoPluginInterface implements CWinProMoPluginInterface 
+                    for the WinProMo Demo Plugin. 
 
    ========================================================================*/
 #include "stdafx.h"
 #include "WPDemoPluginInterface.h"
 #include "resource.h"
-#include "../../WinProMo/src/ProMoEditor/ProMoEditor.h"
-#include "../../WinProMo/src/ProMoEditor/ProMoEntityContainer.h"
-#include "WPDemoCmdHandler.h"
+#include "DemoEditor/WPDemoControlFactory.h"
+#include "DemoEditor/WPDemoCmdHandler.h"
+
+CWPDemoPluginInterface::CWPDemoPluginInterface()
+    : CWinProMoPluginInterface(IDR_WPPLUGIN, _T("demoPlugin"), _T("WinProMo Demo Plugin Diagram"), new CWPDemoControlFactory())
+/* =========================================================================
+    Function :		CWPDemoPluginInterface::CWPDemoPluginInterface
+    Description :	Constructor
+    Access :		Public
+    Return :    	void
+	Parameters :	none
+    Notes :			Customize the parameters passed to the base constructor to
+                    set the document ID, type, description, and control factory
+                    of your plugin. The document ID should be a unique integer
+                    (e.g., 1234) that identifies the type of documents created by
+                    the plugin. The document type should be a unique string (e.g.,
+                    "demoPlugin") that identifies the type of documents created by
+                    the plugin. The document description is a string that describes
+                    the type of documents created by the plugin and is shown in the
+                    "New" dialog when creating a new document. The control factory is
+                    responsible for creating the controls of the diagram (e.g., nodes,
+                    edges, labels, etc.) and their properties. You can create a custom
+                    control factory by deriving from CProMoControlFactory and overriding
+					its methods to create your custom controls.
+* ========================================================================*/
+{
+}
 
 CObArray* CWPDemoPluginInterface::GetElements()
+/* =========================================================================
+    Function :		CWPDemoPluginInterface::GetElements
+    Description :	Returns the list of elements to be added to the Insert
+					menu and the tool palette. Each element is represented by 
+					a CWinProMoPluginCommand object. To display a separator, 
+					add a command with ID=0 and caption="-". To group commands 
+                    in a submenu, add a command with subcommands (m_subCommands) 
+                    containing the submenu commands.
+	Access :		Public
+    Return :    	CObArray* : list of CWinProMoPluginCommand objects
+    Parameters :	none
+	Notes :			Customize this method to add the elements of your diagram. 
+                    The command ID of each element will be passed to the 
+                    command handler (GetCmdHandler) when the element is 
+                    selected, so make sure to set it to a unique value and 
+                    handle it in the command handler.
+* ========================================================================*/
 {
     CObArray* commands = new CObArray();
     if (commands) {
@@ -56,41 +102,39 @@ CObArray* CWPDemoPluginInterface::GetElements()
 }
 
 CObArray* CWPDemoPluginInterface::GetCommands()
+/* =========================================================================
+    Function :		CWPDemoPluginInterface::GetCommands
+    Description :	Returns the list of elements to be added as additional
+                    menu entries (after the x menu) and toolbars. Each element
+                    is represented by a CWinProMoPluginCommand object. To 
+                    display a separator, add a command with ID=0 and 
+                    caption="-". To group commands in a submenu, add a 
+                    command with subcommands (m_subCommands) containing the 
+                    submenu commands.
+    Access :		Public
+    Return :    	CObArray* : list of CWinProMoPluginCommand objects
+    Parameters :	none
+    Notes :			Customize this method if you need any plugin-specific
+                    functionality (e.g., model checking) to be accessible 
+                    to the end-user.
+* ========================================================================*/
 {
     return NULL;
 }
 
-const CString CWPDemoPluginInterface::GetDocumentType()
-{
-    return _T("demoPlugin");
-}
-
-const UINT CWPDemoPluginInterface::GetDocumentID()
-{
-    return IDR_WPPLUGIN;
-}
-
-const CString CWPDemoPluginInterface::GetDocumentDescr()
-{
-    return CString("WinProMo Demo Plugin Diagram");
-}
-
-void CWPDemoPluginInterface::Destroy()
-{
-    delete this;
-}
-
 CProMoCmdHandler* CWPDemoPluginInterface::GetCmdHandler()
+/* =========================================================================
+    Function :		CWPDemoPluginInterface::GetCmdHandler
+    Description :	Returns a pointer to the command handler of the plugin. The
+                    command handler is responsible for handling the commands 
+                    defined in GetElements and GetCommands.
+    Access :		Public
+    Return :    	CProMoCmdHandler* : pointer to the command handler
+    Parameters :	none
+    Notes :			Customize this method to return an instance of your plugin's
+                    command handler. Make sure that the command handler properly
+					handles all the commands defined in GetElements and GetCommands.
+* ========================================================================*/
 {
     return new CWPDemoCmdHandler;
-}
-
-CProMoEntityContainer* CWPDemoPluginInterface::GetContainer()
-{
-    return new CProMoEntityContainer(new CProMoControlFactory, "demoPlugin");
-}
-
-CProMoRenderer* CWPDemoPluginInterface::GetRenderer()
-{
-    return new CProMoRenderer;
 }

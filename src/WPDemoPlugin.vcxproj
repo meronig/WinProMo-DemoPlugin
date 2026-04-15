@@ -94,6 +94,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions);WPDEMOPLUGIN_EXPORTS=1</PreprocessorDefinitions>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions);WPDEMOPLUGIN_EXPORTS=1</PreprocessorDefinitions>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -146,6 +148,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions);WPDEMOPLUGIN_EXPORTS=1</PreprocessorDefinitions>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -175,6 +178,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions);WPDEMOPLUGIN_EXPORTS=1</PreprocessorDefinitions>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -197,7 +201,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="StdAfx.cpp" />
-    <ClCompile Include="WPDemoCmdHandler.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoBlockModel.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoBlockView.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoCmdHandler.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoEdgeModel.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoEdgeView.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoControlFactory.cpp" />
+    <ClCompile Include="DemoEditor\WPDemoEditor.cpp" />
     <ClCompile Include="WPDemoPlugin.cpp" />
     <ClCompile Include="WPDemoPluginInterface.cpp" />
   </ItemGroup>
@@ -207,7 +217,13 @@
   <ItemGroup>
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="WPDemoCmdHandler.h" />
+    <ClInclude Include="DemoEditor\WPDemoBlockModel.h" />
+    <ClInclude Include="DemoEditor\WPDemoBlockView.h" />
+    <ClInclude Include="DemoEditor\WPDemoCmdHandler.h" />
+    <ClInclude Include="DemoEditor\WPDemoEdgeModel.h" />
+    <ClInclude Include="DemoEditor\WPDemoEdgeView.h" />
+    <ClInclude Include="DemoEditor\WPDemoControlFactory.h" />
+    <ClInclude Include="DemoEditor\WPDemoEditor.h" />
     <ClInclude Include="WPDemoPluginInterface.h" />
   </ItemGroup>
   <ItemGroup>

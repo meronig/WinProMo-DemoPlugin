@@ -14,15 +14,12 @@
 class CWPDemoPluginInterface :
     public CWinProMoPluginInterface
 {
+public:
+	CWPDemoPluginInterface();
 	virtual CObArray* GetElements();
 	virtual CObArray* GetCommands();
-	virtual const CString GetDocumentType();
-	virtual const UINT GetDocumentID();
-	virtual const CString GetDocumentDescr();
-	virtual void Destroy();
 	virtual CProMoCmdHandler* GetCmdHandler();
-	virtual CProMoEntityContainer* GetContainer();
-	virtual CProMoRenderer* GetRenderer();
+	
 };
 
 #endif
